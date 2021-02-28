@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Online Video Converter</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Online Video Converter</h1>
+        <p style="color:#c00">Имя файла может содержать латинские буквы, цифры, дефис и подчеркивание.</p>
+
+        <form action="/convert" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="file" name="file">
+            </div>
+
+            <div class="form-group">
+                <label for="to">To:</label>
+                <select id="to" class="form-control" name="to">
+                    <option>mp4</option>
+                    <option>flv</option>
+                    <option>avi</option>
+                    <option>webm</option>
+                    <option>mov</option>
+                </select>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <button class="btn btn-danger btn-block">Convert</button>
+            </div>
+        </form>
+        <div id="info"></div>
+    </div>
+</body>
+</html>
